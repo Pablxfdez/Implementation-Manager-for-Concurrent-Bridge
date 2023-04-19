@@ -16,6 +16,8 @@ no hay coches en sentidos opuestos)
 • Demuestra la ausencia de inanición.
 Implementa una solución en python con la biblioteca multiprocessing.
 
-La primera solución a este ejericicio la hice sin usar la plantilla, solo teniendo como referencia los scripts vistos en clase sobre filosofos, lectores, etc... (Esta solución se encunetra en FernandezdelAmoP_PRPAPractica2.pdf y en FernandezdelAmoP_Practica2Ianicion.pdf.
+La primera solución a este ejericicio la hice sin usar la plantilla, solo teniendo como referencia los scripts vistos en clase sobre filosofos, lectores, etc... (Esta solución se encunetra en FernandezdelAmoP_Practica2.py) .
 
-Los scripts restantes son la solución a esta práctica utilizando la plantilla dada (skel.py)
+Los scripts restantes son la solución a esta práctica utilizando la plantilla dada (skel.py). El que contiene en el nombre 'ianicion', que se refiere de manera correcta a inanición, es una soolución sin tener en cuenta el problema de inanición. En el que no aparece se soluciona este problema con el uso de turnos. 
+
+El pdf es la demostración de que estas soluciones son correctas, tanto por seguridad como por vivacidad.

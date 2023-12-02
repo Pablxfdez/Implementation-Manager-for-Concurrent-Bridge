@@ -1,23 +1,34 @@
-PRPA_Practica2
-Synchronized crossing of a bridge by pedestrians and cars heading both directions using a monitor.
+# Monitor Solution to a Concurrent Problem
+This repository contains the implementation and analysis of a synchronized crossing system for a bridge shared by pedestrians and vehicles in both directions, using a monitor in Python. The problem is inspired by the real-world scenario of the bridge in Ambite, which crosses the river Tajuña and is used by both pedestrians and vehicles, but cannot accommodate vehicles in both directions simultaneously. The key challenge is to ensure safety by preventing pedestrians and vehicles from sharing the bridge at the same time and avoiding vehicles crossing in opposite directions.
 
-El pueblo de Ambite (https://es.wikipedia.org/wiki/Ambite) tiene un puente que
-atraviesa el río Tajuña. Es un puente compartido por peatones y vehículos. La anchura del
-puente no permite el paso de vehículos en ambos sentidos (Observa la figura 1.). Por motivos
-de seguridad los peatones y los vehículos no pueden compartir el puente. En el caso de los
-peatones, sí que que pueden pasar peatones en sentido contrario.
-Desarrolla en papel el cliente y los el monitor (o monitores) necesarios. Parte de una
-solución sencilla que cumpla la seguridad y a partir de ella intenta buscar soluciones a
-los problema de inanición.
-• Escribe el invariante del monitor.
-• Demuestra que el puente es seguro (no hay coches y peatones a la vez en el puente,
-no hay coches en sentidos opuestos)
-• Demuestra la ausencia de deadlocks
-• Demuestra la ausencia de inanición.
-Implementa una solución en python con la biblioteca multiprocessing.
+## Repository Contents:
 
-La primera solución a este ejericicio la hice sin usar la plantilla, solo teniendo como referencia los scripts vistos en clase sobre filosofos, lectores, etc... (Esta solución se encunetra en FernandezdelAmoP_Practica2.py) .
+1. **FernandezdelAmoP_PRPAPractica2.pdf**
+   - **Description**: This document includes a detailed description, code, and analysis of the solutions provided in this repository. It demonstrates the correctness of the solutions in terms of safety and liveliness.
 
-Los scripts restantes son la solución a esta práctica utilizando la plantilla dada (skel.py). El que contiene en el nombre 'ianicion', que se refiere de manera correcta a inanición, es una soolución sin tener en cuenta el problema de inanición. En el que no aparece se soluciona este problema con el uso de turnos. 
+2. **FernandezdelAmoP_Practica2.py**
+   - **Description**: The initial solution to the exercise, developed independently without using the provided template. It references scripts seen in class about philosophers, readers, etc.
 
-El pdf es la demostración de que estas soluciones son correctas, tanto por seguridad como por vivacidad.
+3. **FernandezdelAmoP_Practica2Ianicion.py**
+   - **Description**: This script is a version of the solution that does not take into account the problem of starvation (inanición). It is developed using the provided template (skel.py).
+
+4. **FernandezdelAmoP_Practica2vplantilla.py**
+   - **Description**: This version of the solution addresses the problem of starvation using turns. It is also developed based on the provided template.
+
+5. **Problem_Description.pdf**
+   - **Description**: A document that provides a comprehensive description of the problem, including the context and specific challenges to be addressed in the solutions.
+
+## Problem Analysis and Solutions:
+
+- **Safety**: The solutions ensure that the bridge is safe by preventing simultaneous access by pedestrians and vehicles, and by avoiding vehicles crossing in opposite directions.
+- **Deadlock Avoidance**: The implementations demonstrate the absence of deadlocks, ensuring that the system can operate continuously without halting.
+- **Starvation (Inanición)**: The scripts address the issue of starvation, ensuring that all entities (pedestrians and vehicles) eventually get a chance to cross the bridge.
+- **Monitor Invariant**: Each solution includes an invariant for the monitor, ensuring the correct and safe operation of the bridge crossing system.
+
+## Usage and Implementation:
+
+- The solutions are implemented in Python using the `multiprocessing` library.
+- The repository provides both a basic solution and an advanced solution that addresses starvation.
+- The PDF documents offer insights into the theoretical underpinnings and practical considerations of the implemented solutions.
+
+This repository serves as a comprehensive resource for understanding and implementing a synchronized crossing system for shared bridges, with a focus on safety, deadlock avoidance, and starvation solutions in a multiprocessing environment.
